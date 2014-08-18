@@ -4,7 +4,7 @@
 
 You can think of `SDCAlertView` as `UIAlertView` on steroids. It has added functionality such as a `contentView` property and block syntax, while still keeping the `UIAlertView` look.
 
-![Animated GIF showing alert](http://scott90.github.io/SDCAlertView/ProgressViewAlert.gif)
+![Animated GIF showing alert](http://sberrevoets.github.io/SDCAlertView/ProgressViewAlert.gif)
 
 ## Installation
 The easiest way to install is, of course, by using CocoaPods. The name of the pod is `SDCAlertView`.
@@ -24,6 +24,8 @@ The project also depends on [RBBAnimation](https://github.com/robb/RBBAnimation)
 ## Usage
 `SDCAlertView` is for use in iOS 7 only. It will not work properly on iOS 6.1 or below. Using `SDCAlertView` is very simple: just import SDCAlertView.h and use it as you would `UIAlertView`.
 
+### Basic
+
 Showing a basic `SDCAlertView` alert looks just like showing a basic `UIAlertView` alert:
 ```objc
 SDCAlertView *alert = [[SDCAlertView alloc] initWithTitle:@"Title"
@@ -39,6 +41,8 @@ Or you can use one of the convenience methods:
 [SDCAlertView alertWithTitle:@"Title" message:@"This is a message" buttons:@[@"OK"]];
 ```
 
+### Block syntax
+
 Block syntax saves you from having to use a delegate:
 ```objc
 SDCAlertView *alert = [[SDCAlertView alloc] initWithTitle:@"Title"
@@ -50,6 +54,8 @@ SDCAlertView *alert = [[SDCAlertView alloc] initWithTitle:@"Title"
 	NSLog(@"Tapped button: %@", @(buttonIndex));
 }];
 ```
+
+### `contentView`
 
 Of course, you're not using `SDCAlertView`'s full potential unless you are using the `contentView`:
 ```objc
@@ -69,6 +75,8 @@ spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
 [spinner sdc_verticallyCenterInSuperviewWithOffset:SDCAutoLayoutStandardSiblingDistance];
 [alert show];
 ```
+
+### Additional delegate methods
 
 You can also use the `alertView:shouldDismissWithButtonIndex:` and `alertView:shouldDeselectButtonAtIndex:` to prevent an alert from dismissing:
 ```objc
@@ -90,6 +98,8 @@ You can also use the `alertView:shouldDismissWithButtonIndex:` and `alertView:sh
 }
 ```
 This will deselect the cancel button when it's tapped, but it won't actually dismiss the alert. Useful for password-like alerts that you don't want dismissed until the right password is entered.
+
+### Styling and appearance
 
 `SDCAlertView` uses the `tintColor` for buttons and any subviews you add to the `contentView`. If you are looking for more customizations, you can use `UIAppearance` to style alerts (per instance or all at once):
 ```objc
@@ -113,16 +123,16 @@ Unfortunately, there are a few things that can't or won't be duplicated:
 - `UITextField` placeholders in different languages. "Login" and "Password" are entered as localized strings, but they aren't actually translated.
 - Some behavior is purposely not ported from `UIAlertView`. These cases are discussed in SDCAlertView.h.
 
-## New in 1.3
+## New in 1.4
 
 **What's New:**
- - The `SDCAlertViewTransitioning` protocol allows users to customize alert transitions and behavior
- - `SDCAlertView` now supports `tintColor` for buttons and `contentView`
+ - Added the ability to position a two-button alert vertically as opposed to horizontally
+ - Added `attributedTitle` and `attributedMessage` properties
 
 **Bug Fixes:**
- - Fixes an issue where the status bar style would not be preserved if it was set to `UIStatusBarStyleLightContent` (#26 & #27)
- - Fixes a bug that causes the app to lock up due to a race condition (#28)
- - Adding subviews to `contentView` won't have any animation-related side effects anymore (see #25)
+ - Auto-layout doesn't complain anymore when using `[[SDCAlertView alloc] init]`
+ - Fixes a bug that would not show correct button titles in certain alert configurations
+ - Instead of clipping button text, it now reduces the size of text on buttons appropriately
 
 ## Support
 I'm pretty active on [Stack Overflow](http://stackoverflow.com/users/751268/scott-berrevoets), so please use that if you have any questions. You can also use [Twitter](http://twitter.com/ScottBerrevoets) to contact me directly.
