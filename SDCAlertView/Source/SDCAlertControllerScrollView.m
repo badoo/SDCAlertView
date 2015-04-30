@@ -16,6 +16,7 @@
 @interface SDCAlertControllerScrollView ()
 @property (nonatomic, strong) SDCAlertLabel *titleLabel;
 @property (nonatomic, strong) SDCAlertLabel *messageLabel;
+@property (nonatomic) NSInteger layoutPasses;
 @end
 
 @implementation SDCAlertControllerScrollView
@@ -117,8 +118,15 @@
 }
 
 - (void)layoutSubviews {
+	// Workaround for layout bug. Hack to be fixed later. Works for our use case
+	// of alerts in Bumble.
+	// https://github.com/sberrevoets/SDCAlertView/issues/91
 	[super layoutSubviews];
-	[self invalidateIntrinsicContentSize];
+	if (self.layoutPasses < 5) {
+		[self invalidateIntrinsicContentSize];
+		[super layoutSubviews];
+		self.layoutPasses++;
+	}
 }
 
 - (void)invalidateIntrinsicContentSize {
