@@ -224,9 +224,3 @@ typedef NS_ENUM(NSInteger, SDCAlertViewStyle) {
 @interface SDCAlertView (SDCAlertController)
 + (instancetype)alertViewWithAlertController:(SDCAlertController *)alertController;
 @end
-
-@interface UIColor (SDCAlertViewColors)
-+ (UIColor *)sdc_alertSeparatorColor;
-+ (UIColor *)sdc_textFieldBackgroundViewColor;
-+ (UIColor *)sdc_dimmedBackgroundColor;
-@end

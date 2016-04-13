@@ -51,6 +51,12 @@ static NSInteger const SDCAlertViewDefaultFirstButtonIndex = 0;
 @property (nonatomic, strong) UITableView *otherButtonsTableView;
 @end
 
+@interface UIColor (SDCAlertViewColors)
++ (UIColor *)sdc_alertSeparatorColor;
++ (UIColor *)sdc_textFieldBackgroundViewColor;
++ (UIColor *)sdc_dimmedBackgroundColor;
+@end
+
 @implementation SDCAlertViewContentView
 
 #pragma mark - Initialization

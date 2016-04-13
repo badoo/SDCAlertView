@@ -31,6 +31,12 @@ static CGFloat			const SDCAlertViewSpringAnimationVelocity = 0;
 + (UIWindow *)sdc_alertWindow;
 @end
 
+@interface UIColor (SDCAlertViewColors)
++ (UIColor *)sdc_alertSeparatorColor;
++ (UIColor *)sdc_textFieldBackgroundViewColor;
++ (UIColor *)sdc_dimmedBackgroundColor;
+@end
+
 @interface SDCAlertViewController ()
 @property (nonatomic, strong) UIView *alertContainerView;
 @property (nonatomic, strong) UIView *dimmingView;
