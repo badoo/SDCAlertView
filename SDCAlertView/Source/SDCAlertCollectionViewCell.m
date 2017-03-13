@@ -16,6 +16,7 @@
 @interface SDCAlertCollectionViewCell ()
 @property (nonatomic, strong) UILabel *textLabel;
 @property (nonatomic, strong) UIView *highlightedBackgroundView;
+@property (nonatomic, strong) UIColor *textColor;
 @end
 
 @implementation SDCAlertCollectionViewCell
@@ -58,13 +59,14 @@
 #pragma mark - User Interface
 
 - (void)tintColorDidChange {
-	self.textLabel.textColor = self.tintColor;
+	self.textLabel.textColor = self.textColor ?: self.tintColor;
 }
 
 - (void)updateWithAction:(SDCAlertAction *)action visualStyle:(id<SDCAlertControllerVisualStyle>)visualStyle {
 	self.textLabel.font = [visualStyle fontForAction:action];
-	self.textLabel.textColor = [visualStyle textColorForAction:action];
-	
+	self.textColor = [visualStyle textColorForAction:action];
+	self.textLabel.textColor = self.textColor;
+
 	if (action.attributedTitle) {
 		self.textLabel.attributedText = action.attributedTitle;
 	} else {
