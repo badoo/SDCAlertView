@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		190463062017986A002B5E6B /* SDCAlertView_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 190463042017986A002B5E6B /* SDCAlertView_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		190463092017986A002B5E6B /* SDCAlertView_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190463022017986A002B5E6B /* SDCAlertView_iOS.framework */; };
-		1904630A2017986A002B5E6B /* SDCAlertView_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 190463022017986A002B5E6B /* SDCAlertView_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		190463092017986A002B5E6B /* SDCAlertView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190463022017986A002B5E6B /* SDCAlertView.framework */; };
+		1904630A2017986A002B5E6B /* SDCAlertView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 190463022017986A002B5E6B /* SDCAlertView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1904630F201798C2002B5E6B /* UIView+Parallax.h in Headers */ = {isa = PBXBuildFile; fileRef = D2CABE9319E1ECFE00CA1A89 /* UIView+Parallax.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19046310201798C2002B5E6B /* UIView+Parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CABE9419E1ECFE00CA1A89 /* UIView+Parallax.m */; };
 		19046311201798C2002B5E6B /* SDCIntrinsicallySizedView.h in Headers */ = {isa = PBXBuildFile; fileRef = D294876A18D631B700E3D967 /* SDCIntrinsicallySizedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,7 +120,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1904630A2017986A002B5E6B /* SDCAlertView_iOS.framework in Embed Frameworks */,
+				1904630A2017986A002B5E6B /* SDCAlertView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,11 +129,12 @@
 
 /* Begin PBXFileReference section */
 		02F3F1243FAEADC477B22764 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		190463022017986A002B5E6B /* SDCAlertView_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDCAlertView_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		190463022017986A002B5E6B /* SDCAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDCAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		190463042017986A002B5E6B /* SDCAlertView_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDCAlertView_iOS.h; sourceTree = "<group>"; };
 		190463052017986A002B5E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1909558320179B2200B3013A /* RBBAnimation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RBBAnimation.framework; path = Carthage/Build/iOS/RBBAnimation.framework; sourceTree = "<group>"; };
 		1909558420179B2200B3013A /* SDCAutoLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDCAutoLayout.framework; path = Carthage/Build/iOS/SDCAutoLayout.framework; sourceTree = "<group>"; };
+		19B15B252018A7C10003609B /* SDCAlertView_iOS.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = SDCAlertView_iOS.modulemap; sourceTree = "<group>"; };
 		5E24AC6BD58612E217333B4A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CB28936541154BCF9C9B2F0C /* libPods-SDCAlertViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDCAlertViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D259FC1019CEB02100BA6B36 /* SDCAlertPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCAlertPresentationController.h; sourceTree = "<group>"; };
@@ -219,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25B3CAA17ECE7A6004B32A2 /* CoreGraphics.framework in Frameworks */,
-				190463092017986A002B5E6B /* SDCAlertView_iOS.framework in Frameworks */,
+				190463092017986A002B5E6B /* SDCAlertView.framework in Frameworks */,
 				D25B3CAC17ECE7A6004B32A2 /* UIKit.framework in Frameworks */,
 				D25B3CA817ECE7A6004B32A2 /* Foundation.framework in Frameworks */,
 				D70D28F12B224BE7919DADF7 /* libPods.a in Frameworks */,
@@ -253,6 +254,7 @@
 			children = (
 				190463042017986A002B5E6B /* SDCAlertView_iOS.h */,
 				190463052017986A002B5E6B /* Info.plist */,
+				19B15B252018A7C10003609B /* SDCAlertView_iOS.modulemap */,
 			);
 			path = "SDCAlertView iOS";
 			sourceTree = "<group>";
@@ -289,7 +291,7 @@
 			children = (
 				D25B3CA417ECE7A6004B32A2 /* SDCAlertView.app */,
 				D25B3CC517ECE7A6004B32A2 /* SDCAlertViewTests.xctest */,
-				190463022017986A002B5E6B /* SDCAlertView_iOS.framework */,
+				190463022017986A002B5E6B /* SDCAlertView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -499,7 +501,7 @@
 			);
 			name = "SDCAlertView iOS";
 			productName = "SDCAlertView iOS";
-			productReference = 190463022017986A002B5E6B /* SDCAlertView_iOS.framework */;
+			productReference = 190463022017986A002B5E6B /* SDCAlertView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D25B3CA317ECE7A6004B32A2 /* SDCAlertView */ = {
@@ -835,9 +837,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "SDCAlertView iOS/SDCAlertView_iOS.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.badoo.SDCAlertView-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SDCAlertView;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -885,9 +888,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "SDCAlertView iOS/SDCAlertView_iOS.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.badoo.SDCAlertView-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = SDCAlertView;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
