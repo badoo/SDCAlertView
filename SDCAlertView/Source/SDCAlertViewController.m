@@ -10,10 +10,10 @@
 
 #import "SDCAlertViewCoordinator.h"
 
-#import "RBBSpringAnimation.h"
+#import <RBBAnimation/RBBSpringAnimation.h>
 #import "SDCAlertView.h"
 
-#import "UIView+SDCAutoLayout.h"
+#import <SDCAutoLayout/SDCAutoLayout.h>
 
 #ifndef NSFoundationVersionNumber_iOS_7_1
 #define NSFoundationVersionNumber_iOS_7_1 1047.25

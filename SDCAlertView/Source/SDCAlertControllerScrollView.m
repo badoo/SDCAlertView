@@ -11,7 +11,7 @@
 #import "SDCAlertControllerTextFieldViewController.h"
 #import "SDCAlertLabel.h"
 
-#import "UIView+SDCAutoLayout.h"
+#import <SDCAutoLayout/SDCAutoLayout.h>
 
 @interface SDCAlertControllerScrollView ()
 @property (nonatomic, strong) SDCAlertLabel *titleLabel;

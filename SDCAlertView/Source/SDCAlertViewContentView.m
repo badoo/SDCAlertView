@@ -10,7 +10,7 @@
 
 #import "SDCAlertView.h"
 #import "SDCIntrinsicallySizedView.h"
-#import "UIView+SDCAutoLayout.h"
+#import <SDCAutoLayout/SDCAutoLayout.h>
 
 static CGFloat const SDCAlertViewTextFieldBackgroundViewCornerRadius = 5;
 static UIEdgeInsets const SDCAlertViewTextFieldBackgroundViewPadding = {20, 15, 0, 15};

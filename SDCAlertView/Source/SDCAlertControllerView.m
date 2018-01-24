@@ -15,7 +15,7 @@
 #import "SDCAlertCollectionViewCell.h"
 #import "SDCIntrinsicallySizedView.h"
 
-#import "UIView+SDCAutoLayout.h"
+#import <SDCAutoLayout/SDCAutoLayout.h>
 #import "UIView+Parallax.h"
 
 static NSString *const SDCAlertControllerCellReuseIdentifier = @"SDCAlertControllerCellReuseIdentifier";

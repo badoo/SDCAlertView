@@ -10,7 +10,7 @@
 
 #import "SDCAlertControllerVisualStyle.h"
 
-#import "UIView+SDCAutoLayout.h"
+#import <SDCAutoLayout/SDCAutoLayout.h>
 
 @implementation SDCAlertTextFieldTableViewCell
 

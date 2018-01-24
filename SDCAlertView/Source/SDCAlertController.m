@@ -15,7 +15,7 @@
 #import "SDCIntrinsicallySizedView.h"
 #import "SDCAlertView.h"
 
-#import "UIView+SDCAutoLayout.h"
+#import <SDCAutoLayout/SDCAutoLayout.h>
 #import "UIViewController+Current.h"
 
 @interface SDCAlertAction (Private)

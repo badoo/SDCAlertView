@@ -11,7 +11,7 @@
 #import "SDCAlertController.h" // SDCAlertAction
 #import "SDCAlertControllerVisualStyle.h"
 
-#import "UIView+SDCAutoLayout.h"
+#import <SDCAutoLayout/SDCAutoLayout.h>
 
 @interface SDCAlertCollectionViewCell ()
 @property (nonatomic, strong) UILabel *textLabel;
