@@ -32,7 +32,6 @@ FOUNDATION_EXPORT const unsigned char SDCAlertViewVersionString[];
 #import <SDCAlertView/SDCAlertViewController.h>
 #import <SDCAlertView/SDCAlertViewCoordinator.h>
 #import <SDCAlertView/SDCAlertViewTransitioning.h>
-#import <SDCAlertView/SDCDemoViewController.h>
 #import <SDCAlertView/SDCIntrinsicallySizedView.h>
 #import <SDCAlertView/UIView+Parallax.h>
 #import <SDCAlertView/UIViewController+Current.h>
